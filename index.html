@@ -80,7 +80,7 @@
 
     <div class="download">
       <!-- the installer is the asset of this repo's latest release, always under the same name -->
-      <a class="btn" href="https://github.com/fleet-360/redmark-download/releases/latest/download/ProAlgorithm-Lists-Setup.exe">הורדת קובץ ההתקנה</a>
+      <a class="btn" href="https://github.com/fleet-360/list-download/releases/latest/download/ProAlgorithm-Lists-Setup.exe">הורדת קובץ ההתקנה</a>
       <!-- version and size are filled from the GitHub API below; this text is the fallback -->
       <span class="meta"><bdi data-ver>גרסה 1.0.2</bdi> · <bdi data-size>8MB</bdi> · <bdi class="mono">ProAlgorithm-Lists-Setup.exe</bdi></span>
     </div>
@@ -142,7 +142,7 @@
     // Version and installer size from the latest release, so publishing a version never needs
     // an edit here. api.github.com answers cross-origin; the release download URLs do not.
     // On any failure (offline, rate limit of 60/hour per address) the static text stays.
-    fetch('https://api.github.com/repos/fleet-360/redmark-download/releases/latest')
+    fetch('https://api.github.com/repos/fleet-360/list-download/releases/latest')
       .then(response => response.ok ? response.json() : Promise.reject(response.status))
       .then(release => {
         const version = release.tag_name.replace(/^v/, '');
